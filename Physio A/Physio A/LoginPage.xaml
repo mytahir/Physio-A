@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             x:Class="Physio_A.LoginPage">
+    
+    <Grid Background="#320019">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Frame Background="white" CornerRadius="10" Grid.Row="1" Margin="20,0">
+            <StackLayout Margin="10,20,0,0">
+                <Label Text="*Username:" FontSize="Medium"/>
+                <material:MaterialEntry Type="Outlined" LabelText="Username:" Placeholder="Username" ClearIconIsVisible="True" />
+                
+            </StackLayout>
+        </Frame>
+        <material:MaterialButton />
+
+        <yummy:PancakeView CornerRadius="60" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,50,0,0" 
+                                   HeightRequest="90" Grid.Row="0" Grid.RowSpan="2">
+                    <Image Source="PhysioA.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+        </yummy:PancakeView>
+        
+    </Grid>
+</ContentPage>
