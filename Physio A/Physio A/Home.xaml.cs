@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Physio_A
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class Home : ContentView
     {
-        public LoginPage()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private void LoginBtn(object sender, EventArgs e)
-        {
-            LoginActivity.IsRunning = true;
-            LoginActivity.IsVisible = true;
         }
     }
 }

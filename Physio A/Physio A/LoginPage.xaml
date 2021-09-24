@@ -2,28 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
-             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="Physio_A.LoginPage">
     
     <Grid Background="#320019">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="85"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Frame Background="white" CornerRadius="10" Grid.Row="1" Margin="20,0">
-            <StackLayout Margin="10,20,0,0">
-                <Label Text="*Username:" FontSize="Medium"/>
-                <material:MaterialEntry Type="Outlined" LabelText="Username:" Placeholder="Username" ClearIconIsVisible="True" />
-                
-            </StackLayout>
+        <Frame Background="white" CornerRadius="10" Grid.Row="1" Grid.RowSpan="2" Margin="20,0">
+            <Grid>
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+
+                    <Label Text="Welcome!" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Username:" Placeholder="Enter Username" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Next" ClearIcon="" CornerRadius="4"/>
+
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Password:" Placeholder="Enter Password" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Go" IsPassword="True" CornerRadius="4"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <material:MaterialButton Text="Login" Icon="enter.png"  
+                                         BackgroundColor="#320019" TextColor="White" HorizontalOptions="StartAndExpand"
+                                         Clicked="LoginBtn"/>
+                        <Label Text="Forgot password?" TextDecorations="Underline" TextColor="Red" />
+                    </StackLayout>
+
+                    
+                    <StackLayout Orientation="Horizontal">
+
+                        <Label Text="Not a Patient?" TextColor="#320019"/>
+                        <Label Text="Sign Up" TextDecorations="Underline" TextColor="Blue"/>
+                    </StackLayout>
+
+
+                </StackLayout>
+                <ActivityIndicator IsRunning="False" Color="Gray" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"
+                                   IsVisible= "false" x:Name="LoginActivity" />
+
+                <!--<forms:AnimationView 
+                x:Name="AnimationView" 
+                Animation="spinner-dots.json" 
+                VerticalOptions="EndAndExpand" WidthRequest="10" HeightRequest="10"
+                HorizontalOptions="CenterAndExpand" AutoPlay="True" RepeatMode="Infinite" />-->
+
+
+            </Grid>
         </Frame>
-        <material:MaterialButton />
 
         <yummy:PancakeView CornerRadius="60" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,50,0,0" 
-                                   HeightRequest="90" Grid.Row="0" Grid.RowSpan="2">
-                    <Image Source="PhysioA.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+                                   HeightRequest="120" Grid.Row="0" Grid.RowSpan="2">
+                    <Image Source="PhysioA.jpg" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
         </yummy:PancakeView>
         
     </Grid>

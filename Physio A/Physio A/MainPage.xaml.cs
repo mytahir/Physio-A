@@ -16,6 +16,8 @@ namespace Physio_A
             InitializeComponent();
             MenuItems = GetMenus();
             this.BindingContext = this;
+
+            MainContent.Children.Add(new Home());
         }
 
         public ObservableCollection<Menu> MenuItems { get; set; }

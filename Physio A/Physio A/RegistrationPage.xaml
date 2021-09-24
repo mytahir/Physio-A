@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             x:Class="Physio_A.RegistrationPage">
+    <Grid Background="#320019">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--<Label Text="Registration" TextColor="White" Grid.Row="0" VerticalOptions="EndAndExpand" Margin="20,0" FontSize="Medium"/>-->
+        
+        <Frame Background="white" CornerRadius="10" Grid.Row="1" Grid.RowSpan="2" Margin="20,20,20,0">
+            <Grid>
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="10" Margin="0,30,0,0">
+
+                    <Label Text="Welcome! Register here" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Full Name:" Placeholder="Enter Full Name" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Next" ClearIcon="" CornerRadius="4"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Email:" Placeholder="Enter Email" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Next" ClearIcon="" CornerRadius="4" Keyboard="Email"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Phone Number:" Placeholder="0803..." ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Next" ClearIcon="" CornerRadius="4" Keyboard="Telephone"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Address:" Placeholder="Enter Address" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Next" ClearIcon="" CornerRadius="4"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Password:" Placeholder="Enter Password" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Go" IsPassword="True" CornerRadius="4"/>
+
+                    <material:MaterialEntry Type="Outlined" LabelText="Re-Password:" Placeholder="Re-Enter Password" ClearIconIsVisible="True" 
+                                        BackgroundColor="Transparent" FocusedBackgroundColor="#F7F6F6" BorderColor="DarkGray"
+                                        FocusedBorderColor="#b7aeae"  TabIndex="1" FieldHeightRequest="40"
+                                        FontSize="16" ReturnType="Go" IsPassword="True" CornerRadius="4"/>
+
+                    <material:MaterialButton Text="Register" Icon="enter.png"  
+                                         BackgroundColor="#320019" TextColor="White" HorizontalOptions="StartAndExpand"
+                                         Clicked="RegisterBtn"/>
+                        
+
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <Label Text="Already a Patient?" TextColor="#320019"/>
+                        <Label Text="Sign In" TextDecorations="Underline" TextColor="Blue"/>
+                    </StackLayout>
+
+
+                </StackLayout>
+                <ActivityIndicator IsRunning="False" Color="Gray" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"
+                                   IsVisible= "false" x:Name="RegisterActivity" />
+
+                <!--<forms:AnimationView 
+                x:Name="AnimationView" 
+                Animation="spinner-dots.json" 
+                VerticalOptions="EndAndExpand" WidthRequest="10" HeightRequest="10"
+                HorizontalOptions="CenterAndExpand" AutoPlay="True" RepeatMode="Infinite" />-->
+
+
+            </Grid>
+        </Frame>
+
+        <yummy:PancakeView CornerRadius="60" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"  
+                                   HeightRequest="120" Grid.Row="0" Grid.RowSpan="2" Margin="0,10,0,0">
+            <Image Source="PhysioA.jpg" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
+        </yummy:PancakeView>
+
+    </Grid>
+</ContentPage>
