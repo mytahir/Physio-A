@@ -27,6 +27,7 @@ namespace Physio_A
         {
             return new ObservableCollection<Menu>
             {
+                new Menu { Title = "HOME", Icon = "house.png" },
                 new Menu { Title = "PROFILE", Icon = "profile.png" },
                 new Menu { Title = "FEED", Icon = "feed.png" },
                 new Menu { Title = "ACTIVITY", Icon = "activity.png" },
@@ -38,14 +39,14 @@ namespace Physio_A
         {
             _ = TitleTxt.FadeTo(0);
             _ = MenuItemsView.FadeTo(1);
-            await MainMenuView.RotateTo(0, 300, Easing.BounceOut);
+            await MainMenuView.RotateTo(0, 300, Easing.SinInOut);
         }
 
         private async void Hide()
         {
             _ = TitleTxt.FadeTo(1);
             _ = MenuItemsView.FadeTo(0);
-            await MainMenuView.RotateTo(-90, 300, Easing.BounceOut);
+            await MainMenuView.RotateTo(-90, 300, Easing.SinIn);
         }
 
         private void ShowMenu(object sender, EventArgs e)
