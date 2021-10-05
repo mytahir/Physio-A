@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
-             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
-             x:Class="Physio_A.LoginPage">
-    
-    <Grid Background="#320019">
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls" 
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Physio_A.LoginPage"  NavigationPage.HasNavigationBar="False">
+
+    <Grid Background="#33001A">
         <Grid.RowDefinitions>
             <RowDefinition Height="85"/>
             <RowDefinition Height="85"/>
@@ -32,7 +33,7 @@
 
                     <StackLayout Orientation="Horizontal">
                         <material:MaterialButton Text="Login" Icon="enter.png"  
-                                         BackgroundColor="#320019" TextColor="White" HorizontalOptions="StartAndExpand"
+                                         BackgroundColor="#33001A" TextColor="White" HorizontalOptions="StartAndExpand"
                                          Clicked="LoginBtn"/>
                         <Label Text="Forgot password?" TextDecorations="Underline" TextColor="Red" />
                     </StackLayout>
@@ -41,7 +42,11 @@
                     <StackLayout Orientation="Horizontal">
 
                         <Label Text="Not a Patient?" TextColor="#320019"/>
-                        <Label Text="Sign Up" TextDecorations="Underline" TextColor="Blue"/>
+                        <Label Text="Sign Up" TextDecorations="Underline" TextColor="Blue">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="lblRegister" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
 
 

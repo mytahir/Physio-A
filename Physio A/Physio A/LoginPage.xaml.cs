@@ -17,10 +17,22 @@ namespace Physio_A
             InitializeComponent();
         }
 
-        private void LoginBtn(object sender, EventArgs e)
+        private async void LoginBtn(object sender, EventArgs e)
         {
             LoginActivity.IsRunning = true;
             LoginActivity.IsVisible = true;
+
+            await Task.Delay(5000);
+
+            await Navigation.PushAsync(new MainPage());
+
+            LoginActivity.IsRunning = false;
+            LoginActivity.IsVisible = false;
+        }
+
+        private async void lblRegister(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }

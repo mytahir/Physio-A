@@ -2,8 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             x:Class="Physio_A.Home"
-             >
+             x:Class="Physio_A.Home" NavigationPage.HasNavigationBar="False">
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -16,8 +15,8 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
-              <yummy:PancakeView BackgroundColor="DarkBlue"  CornerRadius="20,0,0,0" Opacity=".9" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <yummy:PancakeView BackgroundColor="#33001A"  CornerRadius="20,0,0,0" Opacity=".9" Grid.Column="0" Grid.ColumnSpan="2">
             <Image Source="MainBackground.png"  Aspect="AspectFill"/>
         </yummy:PancakeView>
 
@@ -44,7 +43,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             
-        <Image Source="WomanDoctor.png" Grid.Row="0" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="280"
+        <Image Source="Doctor.png" Grid.Row="0" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="280"
                Grid.Column="1"/>
 
         <yummy:PancakeView Grid.Row="0" CornerRadius="80" Margin="10,90,0,0"  Grid.Column="0">
@@ -71,7 +70,8 @@
                 </Label>-->
                 <StackLayout>
                     <Label Text="Welcome" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" FontSize="Large" TextColor="Black"/>
-                    <Label Text="Physio-A is a Platforms to solve ....." HorizontalOptions="CenterAndExpand" Margin="5,10,5,5" FontSize="Body" TextColor="Black"
+                    <Label Text="Physio-A provides you a Home Service that allows you to
+                           contact a Physiotherapist anytime you want in the Comfort of your Home at an affordable price." HorizontalOptions="CenterAndExpand" Margin="5,10,5,5" FontSize="Body" TextColor="Black"
                            />
                 </StackLayout>
 

@@ -21,5 +21,10 @@ namespace Physio_A
         {
 
         }
+
+        private async void lblSignin(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }

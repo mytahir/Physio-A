@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Physio_A.MainPage">
+             x:Class="Physio_A.MainPage" NavigationPage.HasNavigationBar="False">
 
     <!--<StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
@@ -32,13 +32,13 @@
             
         </Grid>
 
-        <Grid x:Name="MainMenuView" ColumnDefinitions="Auto, *" BackgroundColor="#320019" HeightRequest="500" 
+        <Grid x:Name="MainMenuView" ColumnDefinitions="Auto, *" BackgroundColor="#33001A" HeightRequest="500" 
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
             <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
                 <StackLayout Orientation="Horizontal" Spacing="20">
                     <ImageButton Source="menu.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
                             VerticalOptions="Start" HorizontalOptions="Center" Margin="0,5,0,0" Clicked="ShowMenu"/>
-                    <Label x:Name="TitleTxt" Text="ACTIVITY" TextColor="White" FontSize="22" FontAttributes="Bold" 
+                    <Label x:Name="TitleTxt" Text="Home" TextColor="White" FontSize="22" FontAttributes="Bold" 
                         HorizontalOptions="Center" VerticalOptions="Start"/>
                 </StackLayout>
             </Grid>
@@ -53,7 +53,7 @@
                                 <Image Source="{Binding Icon}" WidthRequest="20" HeightRequest="20" 
                                     VerticalOptions="Center" HorizontalOptions="Start"/>
                                 <Label Text="{Binding Title}" TextColor="White" FontSize="22" FontAttributes="Bold" 
-                                    HorizontalOptions="Start" VerticalOptions="Center"/>
+                                    HorizontalOptions="Start" VerticalOptions="Center" />
                             </StackLayout>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>

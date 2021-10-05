@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
-             x:Class="Physio_A.RegistrationPage">
-    <Grid Background="#320019">
+             x:Class="Physio_A.RegistrationPage" NavigationPage.HasNavigationBar="False">
+    <Grid Background="#33001A">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="80"/>
@@ -51,15 +51,19 @@
                                         FontSize="16" ReturnType="Go" IsPassword="True" CornerRadius="4"/>
 
                     <material:MaterialButton Text="Register" Icon="enter.png"  
-                                         BackgroundColor="#320019" TextColor="White" HorizontalOptions="StartAndExpand"
+                                         BackgroundColor="#33001A" TextColor="White" HorizontalOptions="StartAndExpand"
                                          Clicked="RegisterBtn"/>
                         
 
 
                     <StackLayout Orientation="Horizontal">
 
-                        <Label Text="Already a Patient?" TextColor="#320019"/>
-                        <Label Text="Sign In" TextDecorations="Underline" TextColor="Blue"/>
+                        <Label Text="Already a Patient?" TextColor="#33001A"/>
+                        <Label Text="Sign In" TextDecorations="Underline" TextColor="Blue">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="lblSignin" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
 
 
@@ -72,7 +76,6 @@
                 Animation="spinner-dots.json" 
                 VerticalOptions="EndAndExpand" WidthRequest="10" HeightRequest="10"
                 HorizontalOptions="CenterAndExpand" AutoPlay="True" RepeatMode="Infinite" />-->
-
 
             </Grid>
         </Frame>

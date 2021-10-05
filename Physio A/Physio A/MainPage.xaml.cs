@@ -11,6 +11,8 @@ namespace Physio_A
 {
     public partial class MainPage : ContentPage
     {
+        
+
         public MainPage()
         {
             InitializeComponent();
@@ -27,10 +29,11 @@ namespace Physio_A
         {
             return new ObservableCollection<Menu>
             {
-                new Menu { Title = "HOME", Icon = "house.png" },
-                new Menu { Title = "PROFILE", Icon = "profile.png" },
-                new Menu { Title = "FEED", Icon = "feed.png" },
-                new Menu { Title = "ACTIVITY", Icon = "activity.png" },
+                new Menu { Title = "HOME", Icon = "homeicon.png" },
+                new Menu { Title = "SERVICES", Icon = "services.png" },
+                new Menu { Title = "SHOPPING", Icon = "shoppingcart.png" },
+                new Menu { Title = "SEARCH", Icon = "search.png" },
+                new Menu { Title = "ABOUT US", Icon = "about.png" },
                 new Menu { Title = "SETTINGS", Icon = "settings.png" }
             };
         }
@@ -58,7 +61,27 @@ namespace Physio_A
         {
             TitleTxt.Text = ((sender as StackLayout).BindingContext as Menu).Title;
             Hide();
+
+            switch (TitleTxt.Text)
+            {
+                case "HOME":
+                    MainContent.Children.Clear();
+                    MainContent.Children.Add(new Home());
+                    break;
+                case "ABOUT US":
+                    MainContent.Children.Clear();
+                    MainContent.Children.Add(new About());
+                    break;
+                case "SERVICES":
+                    MainContent.Children.Clear();
+                    MainContent.Children.Add(new Services());
+                    break;
+                default:
+                    MainContent.Children.Add(new Home());
+                    break;
+            }
         }
+
     }
 
     public class Menu

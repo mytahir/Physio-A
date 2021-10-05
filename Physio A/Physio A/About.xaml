@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             x:Class="Physio_A.About">
+    <Grid BackgroundColor="White">
+
+                 <Image Source="aboutbg.jpg" Aspect="AspectFill" BackgroundColor="White"/>
+
+        <ScrollView>
+
+            <StackLayout Spacing="110" Margin="0,150,0,0" Grid.RowSpan="3">
+
+                    
+                <yummy:PancakeView  BackgroundColor="#33001A" Padding="11" Opacity=".8" CornerRadius="0,20,0,20" Margin="0,0,30,0" HeightRequest="120">
+                           <StackLayout>
+                        <Label  Text="Welcome to Physio A " TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                        
+                        <Label  Text="Your health your wealth " LineBreakMode="WordWrap" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+
+                        <Label BackgroundColor="White" HeightRequest="2" WidthRequest="90" HorizontalOptions="StartAndExpand" />
+
+                    </StackLayout> 
+                    
+                </yummy:PancakeView>
+
+                <yummy:PancakeView BackgroundColor="#33001A" Padding="11" Opacity=".8" CornerRadius="20,0,20,0" Margin="30,0,0,0">
+                    <StackLayout>
+                        <Label Text="About Physio A" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
+                        <Label Text="Physio A provides you a Home Service that allows you to contact a Physiotherapist anytime you want in the comfort of your Home at an affordable price." 
+                               TextColor="White" FontSize="Medium" LineBreakMode="WordWrap"/>
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView BackgroundColor="#33001A" Padding="11" Opacity=".8" CornerRadius="0,20,0,20" Margin="0,0,30,0"
+                                   >
+                    <StackLayout>
+                        <Label Text="Physio A is a Physiotheraphy page for online Home Service Booking, we manage schedules and keeping track of all Information and treatment plan. Physio A allows Physiotherapists to focus on providing the book care to patients through efficient patient information management at the point of care. It provides all the information therapists need on a single platform while helping them manage their appointments efficiently from the comfort of their homes. we dont't only treat the symptoms but also the cause in other to prevent recurrence. Our treatment are based on scientific evidence best practice and we continually engage in professional developement to keep up to date." 
+                               TextColor="White" FontSize="Medium" LineBreakMode="TailTruncation" MaxLines="30" HorizontalTextAlignment="Start"
+                               x:Name="lblReadMore"/>
+
+                        <material:MaterialButton Text="Read More >>" BackgroundColor="White" TextColor="Black" 
+                                                 HorizontalOptions="StartAndExpand" x:Name="btnReadMore" Clicked="btnReadMore_Clicked"/>
+
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <!--<yummy:PancakeView OffsetAngle="45" Sides="4" BackgroundColor="#33001A">                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                    <StackLayout>
+                        <Label Text="Physio A is " HeightRequest="60" TextColor="White" FontSize="Large" LineBreakMode="WordWrap"/>
+
+                    </StackLayout>
+                </yummy:PancakeView>-->
+
+                <Grid>
+                    <Path Data="m432.50496,228.36571l-114.78281,-23.36074l-59.21711,-11l0,113.00002l173.99993,0l0,-78.63928z"
+                        Stroke="#33001A" Fill="#33001A" Aspect="UniformToFill" Opacity=".8"
+                        HorizontalOptions="Start" />
+
+                    <StackLayout Margin="10,30,0,0">
+                        <StackLayout>
+                            <Label Text="Contact Us:" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
+                            <Label BackgroundColor="White" HeightRequest="2" WidthRequest="90" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Phone No:" TextColor="White" FontSize="Large"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Address:" TextColor="White" FontSize="Large"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Connect with us:" TextColor="White" FontSize="Large"/>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="0,20,0,0">
+                            <Image Source="facebook" WidthRequest="30" HeightRequest="30"/>
+                            <Image Source="twitter"  WidthRequest="30" HeightRequest="30"/>
+                            <Image Source="instagram" WidthRequest="30" HeightRequest="30"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout> 
+
+        </ScrollView>
+        
+        <!--<Frame BackgroundColor="White" Grid.Row="0" Grid.RowSpan="3" Opacity=".5"/>
+
+        <Path Stroke="#33001A" Data="m505.41,317.83999l-301.99998,0l0,-120.22007c150.99999,0 150.99999,
+              -45.80605 301.99998,-19.77989l0,139.99996z" Fill="#33001A" Aspect="Fill" Grid.Row="2" Opacity=".9" 
+              /> -->
+
+
+    </Grid>
+</ContentView>
